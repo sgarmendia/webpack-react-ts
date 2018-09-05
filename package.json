@@ -1,0 +1,36 @@
+{
+  "name": "light-react",
+  "version": "1.0.0",
+  "description": "Light React Boilerplate",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest ./test"
+  },
+  "keywords": [
+    "boilerplate",
+    "react"
+  ],
+  "author": "Simon Garmendia",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.4.0",
+    "jest": "^23.5.0",
+    "react-test-renderer": "^16.4.2"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"
+  }
+}
