@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode=development",
-    "prod": "webpack-dev-server --mode=production",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "test": "jest ./test"
   },
   "keywords": [
@@ -22,10 +22,10 @@
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/cli": "^7.0.0",
     "babel-loader": "^8.0.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
@@ -39,7 +39,8 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"
