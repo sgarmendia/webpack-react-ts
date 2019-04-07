@@ -14,8 +14,8 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: ['node_modules'],
-        use: [{ loader: 'babel-loader', query: {compact: false}}],
+        exclude: [path.resolve(__dirname, 'node_modules')],
+        use: [{ loader: 'babel-loader' }],
       },
       {
         test: /\.s(a|c)ss$/,
@@ -48,6 +48,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin()
   ],
 }
