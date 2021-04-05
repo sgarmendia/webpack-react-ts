@@ -1,4 +1,4 @@
-# Light React Boilerplate
+# Light React Webpack Boilerplate
 
 ## Commands
 `npm install`

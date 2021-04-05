@@ -1,0 +1,30 @@
+// Normalizing styles
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background-color: dimgray;
+}
+
+//--------------------------------------//
+
+#app {
+  h1 {
+    font-family: monospace;
+    padding-left: 1em;
+    color: white;
+  }
+}

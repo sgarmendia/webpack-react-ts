@@ -1,6 +1,6 @@
 import App from '../src/components/App';
 import React from 'react';
-import { shallow } from 'enzyme';
+// import { shallow } from 'enzyme';
 
 describe('App', () => {
   test('matches snapshot', () => {

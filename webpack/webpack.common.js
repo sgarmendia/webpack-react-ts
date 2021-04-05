@@ -1,20 +1,21 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: path.resolve(__dirname, '..', './src/index.js'),
   },
   output: {
-    filename: '[name].[hash].js',
-    path: path.resolve('./dist'),
+    // filename: '[name].[hash].js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname,'..', './dist'),
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: [path.resolve(__dirname, 'node_modules')],
+        test: /\.(js|jsx)$/,
+        exclude: [path.resolve(__dirname, '..', 'node_modules')],
         use: [{ loader: 'babel-loader' }],
       },
       {
@@ -44,10 +45,16 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: 'index.html'
-    }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebPackPlugin(
+      { 
+        title: 'react webpack template',
+        template: path.resolve(__dirname, '..', './src/index.html'),
+      }
+    ),
   ],
 }

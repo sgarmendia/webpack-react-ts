@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Welcome to Light React Boilerplate</h1>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+        <h1>Welcome to Webpack React Boilerplate</h1>
+    )
+};
 
 export default App;

@@ -3,3 +3,8 @@
 
 # production
 /dist
+
+#env files
+.env
+.env.dev
+.env.prod
