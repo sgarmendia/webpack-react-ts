@@ -1,8 +1,8 @@
 {
-  "name": "webpack-react",
+  "name": "webpack-react-ts",
   "version": "1.0.0",
-  "description": "React Webpack Boilerplate",
-  "main": "index.js",
+  "description": "React Typescript Webpack Boilerplate",
+  "main": "index.tsx",
   "directories": {
     "test": "test"
   },
@@ -10,12 +10,13 @@
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "build:analyze": "npm run build -- --env addon=analyze",
     "start": "webpack serve --config webpack/webpack.config.js  --env env=dev",
-    "test": "jest ./test --watch"
+    "test": "jest ./src --watch"
   },
   "keywords": [
     "boilerplate",
     "webpack",
-    "react"
+    "react",
+    "typescript"
   ],
   "author": "Simon Garmendia",
   "license": "ISC",
@@ -24,11 +25,16 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@babel/runtime": "^7.13.10",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
@@ -39,6 +45,7 @@
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
+    "typescript": "^4.2.4",
     "webpack": "^5.30.0",
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^4.6.0",

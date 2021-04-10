@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, '..', './src/index.js'),
+    main: path.resolve(__dirname, '..', './src/index.tsx'),
   },
   output: {
     // filename: '[name].[hash].js',
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx|js|jsx)$/,
         exclude: [path.resolve(__dirname, '..', 'node_modules')],
         use: [{ loader: 'babel-loader' }],
       },
@@ -46,7 +46,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx','.tsx'],
   },
   plugins: [
     new CleanWebpackPlugin(),
